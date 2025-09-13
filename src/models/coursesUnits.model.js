@@ -6,9 +6,11 @@ const coursesUnitsSchema = new Schema(
         title: {
             type: String,
             required: true,
+            unique: true
         },
         description: {
-            type: String
+            type: String,
+            unique: true
         }
     }
 );
