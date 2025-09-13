@@ -26,7 +26,6 @@ app.use(cors({
 
 //rutas 
 app.use("/api", routerTeachers)
-app.use("api", routerTeachers)
 
 //test conection BD
 connectDB()
