@@ -18,4 +18,4 @@ const studentsSchema = new Schema(
     }
 );
 
-export const StudentsModel = model("Teacher", studentsSchema)
+export const StudentsModel = model("Students", studentsSchema)
