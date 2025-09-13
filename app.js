@@ -1,6 +1,7 @@
 import "dotenv/config"
 import express from "express"
 import cors from "cors"
+import { routerTeachers } from "./src/routes/teachers.route.js"
 import { connectDB } from "./src/config/database.js"
 
 const PORT = process.env.PORT
@@ -24,7 +25,8 @@ app.use(cors({
 
 
 //rutas 
-
+app.use("/api", routerTeachers)
+app.use("api", routerTeachers)
 
 //test conection BD
 connectDB()
