@@ -13,7 +13,7 @@ const profilesSchema = new Schema(
             unique: true
         },
         password: {
-            type: Number,
+            type: String,
             required: true,
         }
     }
