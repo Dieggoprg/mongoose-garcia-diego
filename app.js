@@ -1,8 +1,7 @@
 import "dotenv/config"
 import express from "express"
 import cors from "cors"
-import { routerTeachers } from "./src/routes/teachers.route.js"
-import { routerStudents } from "./src/routes/students.route.js"
+import { routes } from "./src/routes/indexRouter.js"
 import { connectDB } from "./src/config/database.js"
 
 const PORT = process.env.PORT
@@ -18,16 +17,15 @@ const app = express()
 
 // Cursos – Evaluaciones (1:N)
 
-//middlewares
+//middlewares para la configuración del servidor
 app.use(express.json())
 app.use(cors({
     // origin: 
 }))
 
 
-//rutas 
-app.use("/api", routerTeachers)
-app.use("/api", routerStudents)
+//middleware de rutas
+app.use("/api", routes)
 
 //test conection BD
 connectDB()
